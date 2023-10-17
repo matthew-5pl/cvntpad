@@ -1,6 +1,6 @@
 # cvntpad
 
-<img alt="cvntpad logo: a dark gray keyboard with white keys and a pair of lime green lips in the background" src="logo.svg" width=250 height=250>
+<img alt="cvntpad logo: a dark gray keyboard with white keys and a pair of lime green lips in the background" src="../../logo.svg" width=250 height=250>
 
 for non qmk-template info please refer to the root `/README.md`, [here](../../README.md)
 
