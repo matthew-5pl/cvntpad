@@ -1,4 +1,5 @@
 # cvntpad 🍋
+![cvntpad logo: a dark gray keyboard with white keys and a pair of lime green lips in the background](logo.svg =250x250)
 the cvntpad is a (currently wip) 3x3 qmk macropad powered by the waveshare rp2040
 
 it's my first attempt at cad modelling and writing qmk keymaps, so expect it to be very rough around the edges
@@ -15,3 +16,7 @@ since i haven't written a shell script to automate builds yet you're gonna need 
 - compile (`qmk compile -kb cvntpad -km default`)
 
 if you need help with other parts of the qmk build process please refer to the [official guide](https://docs.qmk.fm/#/newbs). 
+
+# credits
+- [qmk firmware](https://github.com/qmk/qmk_firmware)
+- [twemoji (edited and used in the logo)](https://twemoji.twitter.com/)
