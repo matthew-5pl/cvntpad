@@ -1,12 +1,12 @@
 # cvntpad
 
-![cvntpad](imgur.com image replace me!)
+<img alt="cvntpad logo: a dark gray keyboard with white keys and a pair of lime green lips in the background" src="logo.svg" width=250 height=250>
 
-*A short description of the keyboard/project*
+for non qmk-template info please refer to the root `/README.md`, [here](../../README.md)
 
 * Keyboard Maintainer: [Matteo Forlani](https://github.com/matthew-5pl)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: Waveshare RP2040-Zero
+* Hardware Availability: basically any eCommerce site, i bought it on [amazon italy](https://www.amazon.it/dp/B09M42BS6H?psc=1&ref=ppx_yo2ov_dt_b_product_details).
 
 Make example for this keyboard (after setting up your build environment):
 
@@ -20,8 +20,6 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Bootloader
 
-Enter the bootloader in 3 ways:
+Enter the bootloader:
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+hold the BOOT button on the RP2040-Zero's PCB and press the RESET button. if done correctly the mcu should show up as a flash memory device on the computer its connected to. to flash the firmware just drag the `.uf2` binary in the root folder of the RP2040.
