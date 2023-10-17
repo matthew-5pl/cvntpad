@@ -6,7 +6,7 @@ for non qmk-template info please refer to the root `/README.md`, [here](../../RE
 
 * Keyboard Maintainer: [Matteo Forlani](https://github.com/matthew-5pl)
 * Hardware Supported: Waveshare RP2040-Zero
-* Hardware Availability: basically any eCommerce site, i bought it on [amazon italy](https://www.amazon.it/dp/B09M42BS6H?psc=1&ref=ppx_yo2ov_dt_b_product_details).
+* Hardware Availability: basically any eCommerce site, i bought an equivalent clone on [amazon italy](https://www.amazon.it/dp/B09M42BS6H?psc=1&ref=ppx_yo2ov_dt_b_product_details) because it had next-day shipping.
 
 Make example for this keyboard (after setting up your build environment):
 
