@@ -48,6 +48,8 @@ then
 	echo "An error occured while compiling QMK. Please check for errors in the logs above ^^^^^"
 else
 	echo "QMK Compiled successfully! Listing .uf2 files..."
+	firmwares=`ls | grep .uf2`
 	ls | grep .uf2
 	echo "One of these files should be the cvntboard firmware... xoxo"
+	cp $firmwares ../
 fi
