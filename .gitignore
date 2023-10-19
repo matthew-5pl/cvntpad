@@ -1,1 +1,3 @@
 .vscode
+*.uf2
+qmk_firmware
