@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+// #include "cvntled.h"
 
 #define MIDI_ADVANCED
 
@@ -10,11 +11,24 @@ extern MidiDevice midi_device;
 #define MIDI_CC_OFF 0
 #define MIDI_CC_ON  127
 
+// #define COM_PIN		GP26
+// #define RED_PIN		GP27
+// #define GREEN_PIN	GP28
+// #define BLUE_PIN	GP29
+
+// CvntLed* thatLed;
+
 enum custom_keycodes {
     MIDI_CC80 = SAFE_RANGE,
 };
 
+// void bootmagic_lite(void) {
+// 	cvntled_new(thatLed, COM_PIN, RED_PIN, GREEN_PIN, BLUE_PIN, COM_CATHODE);
+// }
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+	// should be red ig!
+	// cvntled_set(thatLed, 1, 0, 0);
     switch(keycode) {
     case MIDI_CC80:
         
