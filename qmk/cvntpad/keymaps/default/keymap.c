@@ -7,6 +7,7 @@
 #define MIDI_ADVANCED
 
 extern MidiDevice midi_device;
+bool is_post = false;
 
 #define MIDI_CC_OFF 0
 #define MIDI_CC_ON  127
@@ -26,6 +27,10 @@ enum custom_keycodes {
 // 	cvntled_new(thatLed, COM_PIN, RED_PIN, GREEN_PIN, BLUE_PIN, COM_CATHODE);
 // }
 
+void keyboard_post_init_user(void) {
+	is_post = true;
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	// should be red ig!
 	// cvntled_set(thatLed, 1, 0, 0);
@@ -39,6 +44,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             midi_send_cc(&midi_device, 0, 127, MIDI_CC_OFF);
         }
         return true;
+    case KC_A:
+    	if(record->event.pressed && !is_post) {
+    		reset_keyboard();
+    		return false;
+    	} else {
+    		return true;
+    	}
     }
     return true;
 }
@@ -53,8 +65,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │ G │ H │ I │
      * └───┴───┴───┘
      */
+    //[0] = LAYOUT_ortho_3x3(
+    //    KC_A,    KC_B,    KC_C,
+    //    KC_D,    KC_E,    KC_F,
+    //    KC_G,    KC_H,    KC_I
+    //)
     [0] = LAYOUT_ortho_3x3(
-        KC_A,    KC_B,    MIDI_CC80,
+    	KC_A,    KC_B,    KC_C,
         KC_D,    KC_E,    KC_F,
         KC_G,    KC_H,    KC_I
     )
