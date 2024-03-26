@@ -1,7 +1,7 @@
 {
 	"name": "cvntpad",
-	"vendorId": "0xFEED",
-	"productId": "0x0000",
+	"vendorId": "FEED",
+	"productId": "0000",
 	"matrix": {"rows": 3, "cols": 3},
 	"layouts": {
 		"keymap": [
